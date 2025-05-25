@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Editar Tarefa{% endblock %}
+{% block content %}
+<h2>Editar Tarefa</h2>
+<form method="post">
+    <input type="text" name="titulo" value="{{ tarefa.titulo }}" placeholder="Novo título" required>
+    <textarea name="descricao" placeholder="Nova descrição">{{ tarefa.descricao }}</textarea>
+    <button type="submit">Salvar</button>
+</form>
+<a href="{{ url_for('index') }}">Voltar</a>
+{% endblock %}
